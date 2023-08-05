@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Query Test</label>
+    <protected>true</protected>
+    <values>
+        <field>blsw__Active__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>blsw__Concrete_Type__c</field>
+        <value xsi:type="xsd:string">blsw.GetAccountByTypeQuery</value>
+    </values>
+    <values>
+        <field>blsw__Environment__c</field>
+        <value xsi:type="xsd:string">Test</value>
+    </values>
+    <values>
+        <field>blsw__Handler_Type__c</field>
+        <value xsi:type="xsd:string">blsw.GetAccountByTypeQueryHandler</value>
+    </values>
+    <values>
+        <field>blsw__Order__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>blsw__RequestType__c</field>
+        <value xsi:type="xsd:string">Query</value>
+    </values>
+</CustomMetadata>
