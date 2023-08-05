@@ -13,9 +13,9 @@ Documentation can be found in the _docs_ directory and [CQRS](https://github.com
 ## Caveat-Preemptor
 
 The sample code is just that. There is room for much improvement and robustness. The Unit
-Tests are enough to provide at least 75% code coverage. If one decides to use the code, it is AS-IS.
-Finally, the code was prefixed with either cqrs_ or util_ to avoid name collision. The packaging
-does not use a namespace but was tested and can be packaged as a 2GP unlocked package.
+Tests are enough to provide at least >75% code coverage. If one decides to use the code, it is AS-IS.
+Finally, the samples are packaed into an UNLOCKED package. This allows you to edit apex classes and
+uninstall all the samples with a simple click!
 
 ## Samples
 
@@ -55,7 +55,7 @@ List<blsw.ICommand> commands = new List<blsw.ICommand> {
 blsw.CustomSettingResourceMgr.customSetting()
 .isHandlerExtension(true)
 .isEventSourcing(true)
-//.isMetrics(true)
+.isMetrics(true)
 //.isTracing(true)
 .isCaching(true);
 //
@@ -128,7 +128,7 @@ Integer jnx=1;
 blsw.CustomSettingResourceMgr.customSetting()
 .isHandlerExtension(true)
 .isEventSourcing(true)
-//.isMetrics(true)
+.isMetrics(true)
 //.isTracing(true)
 .isCaching(true);
 
@@ -206,7 +206,7 @@ blsw.ApexEnvironment.setEnvironment(blsw.ApexConstants.ALL_CATEGORY);
 blsw.CustomSettingResourceMgr.customSetting()
 .isHandlerExtension(true)
 .isEventSourcing(true)
-//.isMetrics(true)
+.isMetrics(true)
 //.isTracing(true)
 .isCaching(true);
 //
