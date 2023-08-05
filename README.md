@@ -1,5 +1,4 @@
 #
-http://sanjaykeynotes.blogspot.com/2020/12/salesforce-lwc-with-third-party-js-d3.html
 # Salesforce CQRS Force Instrumented Samples+++
 
 The Samples are an UNLOCKED package. You can edit the code as needed. Actual examples can be found in ./src/scripts/apex.
