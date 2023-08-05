@@ -117,7 +117,11 @@ Records.
 Create your Scratch Org (or Dev Sandbox)
 
 * (Not Recommended) SFDX installed  - sfdx force:source:deploy ./src
-* Package Install - <Salesforce-My-Domain>/packaging/installPackage.apexp?p0=04t6g000008s8MmAAI 
+* Package Install - 
+
+```` 
+<Salesforce-My-Domain>/packaging/installPackage.apexp?p0=04t6g000008s8MmAAI 
+```` 
 
 The Samples are an UNLOCKED Package ( meaning you are free to edit ). There are samples already created and can
 be run thru VSCode or a DevConsole. You can find those examples, in ./src/srcipts/apex.
@@ -128,6 +132,10 @@ __Note, you MUST INSTALL the Core Force Instrumentation Managed Package FIRST __
 
 Create your Scratch Org (or Dev Sandbox)
 
-* Package Install - <Salesforce-My-Domain>/packaging/installPackage.apexp?p0=04t6g000008o0UtAAI 
+* Package Install - 
+
+```` 
+<Salesforce-My-Domain>/packaging/installPackage.apexp?p0=04t6g000008o0UtAAI 
+```` 
 
 
