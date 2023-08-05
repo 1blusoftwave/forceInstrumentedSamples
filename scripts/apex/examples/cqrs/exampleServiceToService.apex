@@ -1,7 +1,7 @@
 // batches up outgoing text
 List<String> outputData                 = new List<String>();
 // set the environment we want; otherwise, will default to debug in anonymous mode.
-ApexEnvironment.setEnvironment(blsw.ApexConstants.ALL_CATEGORY);
+blsw.ApexEnvironment.setEnvironment(blsw.ApexConstants.ALL_CATEGORY);
 // we turn on (whether the custom setting is on/off) various
 // attributes:
 //  (a) ensure we resolve the handler (automaticlly, if not in custom metadata)
@@ -12,7 +12,7 @@ ApexEnvironment.setEnvironment(blsw.ApexConstants.ALL_CATEGORY);
 blsw.CustomSettingResourceMgr.customSetting()
 .isHandlerExtension(true)
 .isEventSourcing(true)
-// .isMetrics(true)
+.isMetrics(true)
 // .isTracing(true)
 .isCaching(true);
 //
@@ -27,7 +27,7 @@ blsw.CustomSettingResourceMgr.customSetting()
 //   4) Ensure items follow transactional behavior (i.e. rollback on failure)
 //   5) Publish events per action (Command/Query/Service)
 //
-List<blsw.IResult> results       =  blsw.ApplicationCQRS.serviceDispatcher(new blsw.SampleProcessService());
+List<blsw.IResult> results       =  blsw.ApplicationCQRS.serviceDispatcher(new SampleProcessService());
 // how many results do we have
 Integer numOfResults        = results.size();
 

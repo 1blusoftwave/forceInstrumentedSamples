@@ -10,8 +10,8 @@ blsw.ApexEnvironment.setEnvironment(blsw.ApexConstants.ALL_CATEGORY);
 // provide a non-DB related way (DTO) to push data to the appropriate command(s).
 //
 List<blsw.ICommand> commands = new List<blsw.ICommand> {
-    new blsw.AuthenticationCommand('test-uid','test-password'),
-    new blsw.WriteResultCommand('test-id')
+    new AuthenticationCommand('test-uid','test-password'),
+    new WriteResultCommand('test-id')
 };
 
 
@@ -23,10 +23,10 @@ List<blsw.ICommand> commands = new List<blsw.ICommand> {
 //  (c) metrics of the entity
 //  (d) tracing informaton
 //  (e) caching for performance
-CustomSettingResourceMgr.customSetting()
+blsw.CustomSettingResourceMgr.customSetting()
 .isHandlerExtension(true)
 .isEventSourcing(true)
-//.isMetrics(true)
+.isMetrics(true)
 //.isTracing(true)
 .isCaching(true);
 //
