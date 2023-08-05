@@ -126,7 +126,7 @@ Create your Scratch Org (or Dev Sandbox)
 The Samples are an UNLOCKED Package ( meaning you are free to edit ). There are samples already created and can
 be run thru VSCode or a DevConsole. You can find those examples, in ./src/srcipts/apex.
 
-__Note, you MUST INSTALL the Core Force Instrumentation Managed Package FIRST __
+__Note, you MUST INSTALL the Core Force Instrumentation Managed Package FIRST__
 
 ## How to install Core Force Instrumentation
 
