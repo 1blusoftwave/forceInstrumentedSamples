@@ -10,7 +10,7 @@ You can find documentation in ./docs directory. There will be a tutorial on setu
 
 Command-Query Responsibility Segregation, or CQRS, provides the ability to separate Queries from Commands responsibilities using SOLID Principles. Queries retrieve information from a sink (data store) for the user. While a Command performs a task, such as update a sink (data store). Commands mutate state, while a Query does not. Technically, a Command does not return a value; however, the example which follows will return status. Each provides a single responsibility (Single Responsibility principle in SOLID).
 
-Documentation can be found in the _docs_ directory and [CQRS](https://github.com/1blusoftwave/forceInstrumentedSamples/tree/main/docs/CQRS-Design.pdf)
+Documentation can be found in the _docs_ directory [CQRS Design](https://github.com/1blusoftwave/forceInstrumentedSamples/tree/main/docs/CQRS-Design.pdf)
 
 ## Caveat-Preemptor
 

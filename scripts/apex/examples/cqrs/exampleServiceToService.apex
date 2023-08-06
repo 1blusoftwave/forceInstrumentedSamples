@@ -13,7 +13,7 @@ blsw.CustomSettingResourceMgr.customSetting()
 .isHandlerExtension(true)
 .isEventSourcing(true)
 .isMetrics(true)
-// .isTracing(true)
+.isTracing(true)
 .isCaching(true);
 //
 // get the service by name. A service name provides a means to process

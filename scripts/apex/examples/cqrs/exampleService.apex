@@ -13,7 +13,7 @@ blsw.CustomSettingResourceMgr.customSetting()
 .isHandlerExtension(true)
 .isEventSourcing(true)
 .isMetrics(true)
-//.isTracing(true)
+.isTracing(true)
 .isCaching(true);
 //
 // get the service by name. A service name provides a means to process
@@ -27,7 +27,7 @@ blsw.CustomSettingResourceMgr.customSetting()
 //   4) Ensure items follow transactional behavior (i.e. rollback on failure)
 //   5) Publish events per action (Command/Query/Service)
 //
-List<blsw.IResult> results      =  blsw.ApplicationCQRS.serviceDispatcher(new blsw.CustomerService());
+List<blsw.IResult> results      =  blsw.ApplicationCQRS.serviceDispatcher(new CustomerService());
 // how many results do we have
 Integer numOfResults            = results.size();
 

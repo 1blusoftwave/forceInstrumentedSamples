@@ -20,7 +20,7 @@ blsw.ApexEnvironment.setEnvironment(blsw.ApexConstants.ALL_CATEGORY);
 // between external forces and internal forces. Of course, if
 // the "convertTo" is null, then the SObject is returned ( no-conversion done)!
 //
-List<blsw.IQuery> queries = new List<blsw.IQuery> {
+List<IQuery> queries = new List<IQuery> {
     // get account by type ()
     //'Enterprise'
     new GetAccountByTypeQuery('enterprise',convertTo)
@@ -34,7 +34,7 @@ Integer jnx=1;
 //  (c) metrics of the entity
 //  (d) tracing informaton
 //  (e) caching for performance
-blsw.CustomSettingResourceMgr.customSetting()
+CustomSettingResourceMgr.customSetting()
 .isHandlerExtension(true)
 .isEventSourcing(true)
 //.isMetrics(true)
@@ -47,7 +47,7 @@ blsw.CustomSettingResourceMgr.customSetting()
 // Query Handlers can be swapped out as needs/process change.
 //
 // act
-List<blsw.IQueryResult> results=  blsw.ApplicationCQRS.queryDispatcher(queries);
+List<IQueryResult> results=  ApplicationCQRS.queryDispatcher(queries);
 // how many results do we have
 Integer numOfResults = results.size();
 
@@ -66,7 +66,7 @@ for (Integer inx=0; inx < numOfResults; inx++ ) {
                    + '\n++++++++++++++++RECORDs++++++++++++++++++++++++++++');
     outputData.add('++++++++++++++++OUTPUTs++++++++++++++++++++++++++++');
     // iterate over queries
-    blsw.IQueryResult qresult= results[inx];
+    IQueryResult qresult= results[inx];
     // iterate over the results
     for ( Object obj: qresult.results() ) {
         // what was the type ( was conversion done?)
