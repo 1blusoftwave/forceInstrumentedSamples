@@ -1,14 +1,16 @@
 #
-# Salesforce CQRS Force Instrumented Samples+++
+# Salesforce Core Force Instrumented Samples+++
 
 The Samples are an UNLOCKED package. You can edit the code as needed. Actual examples can be found in ./src/scripts/apex.
+The examples below came from ./src/scripts/apex/cqrs and provides a easy flow.
+
 You can find documentation in ./docs directory. There will be a tutorial on setup, examples, etc. along with various videos.
 
 # Salesforce CQRS Design Pattern+++
 
-Command-Query Responsibility Segregation, or CSRQ, provides the ability to separate Query from Commands responsibilities using SOLID Principles. Queries retrieve information from a sink (data store) for the user. A command performs a task, such as update a sink (data store). Commands mutate state, while a Query does not. Technically, a Command does not return a value; however, the example which follows will return status. Each provides a single responsibility (Single Responsibility principle in Solid).
+Command-Query Responsibility Segregation, or CQRS, provides the ability to separate Queries from Commands responsibilities using SOLID Principles. Queries retrieve information from a sink (data store) for the user. While a Command performs a task, such as update a sink (data store). Commands mutate state, while a Query does not. Technically, a Command does not return a value; however, the example which follows will return status. Each provides a single responsibility (Single Responsibility principle in SOLID).
 
-Documentation can be found in the _docs_ directory and [CQRS](https://github.com/bjanderson70/cqrs_dx/blob/master/docs/CQRS-Design.pdf)
+Documentation can be found in the _docs_ directory and [CQRS](https://github.com/1blusoftwave/forceInstrumentedSamples/tree/main/docs/CQRS-Design.pdf)
 
 ## Caveat-Preemptor
 
@@ -48,10 +50,10 @@ List<blsw.ICommand> commands = new List<blsw.ICommand> {
 // we turn on (whether the custom setting is on/off) various
 // attributes:
 //  (a) ensure we resolve the handler (automaticlly, if not in custom metadata)
-//  (b) event sourcing [ a means to provide state and entity information]
-//  (c) metrics of the entity
-//  (d) tracing informaton
-//  (e) caching for performance
+//  (b) event sourcing [ a means to provide state and entity information - trace of execution ]
+//  (c) metrics of the entity (Charts and Realtime Monitoring use this information)
+//  (d) tracing informaton ( Guarded information, i.e., syslog )
+//  (e) caching for performance ( use caching to improve performance of DML )
 blsw.CustomSettingResourceMgr.customSetting()
 .isHandlerExtension(true)
 .isEventSourcing(true)
@@ -121,10 +123,10 @@ Integer jnx=1;
 // we turn on (whether the custom setting is on/off) various
 // attributes:
 //  (a) ensure we resolve the handler (automaticlly, if not in custom metadata)
-//  (b) event sourcing [ a means to provide state and entity information]
-//  (c) metrics of the entity
-//  (d) tracing informaton
-//  (e) caching for performance
+//  (b) event sourcing [ a means to provide state and entity information - trace of execution ]
+//  (c) metrics of the entity (Charts and Realtime Monitoring use this information)
+//  (d) tracing informaton ( Guarded information, i.e., syslog )
+//  (e) caching for performance ( use caching to improve performance of DML )
 blsw.CustomSettingResourceMgr.customSetting()
 .isHandlerExtension(true)
 .isEventSourcing(true)
@@ -199,10 +201,10 @@ blsw.ApexEnvironment.setEnvironment(blsw.ApexConstants.ALL_CATEGORY);
 // we turn on (whether the custom setting is on/off) various
 // attributes:
 //  (a) ensure we resolve the handler (automaticlly, if not in custom metadata)
-//  (b) event sourcing [ a means to provide state and entity information]
-//  (c) metrics of the entity
-//  (d) tracing informaton
-//  (e) caching for performance
+//  (b) event sourcing [ a means to provide state and entity information - trace of execution ]
+//  (c) metrics of the entity (Charts and Realtime Monitoring use this information)
+//  (d) tracing informaton ( Guarded information, i.e., syslog )
+//  (e) caching for performance ( use caching to improve performance of DML )
 blsw.CustomSettingResourceMgr.customSetting()
 .isHandlerExtension(true)
 .isEventSourcing(true)
@@ -251,12 +253,21 @@ Our service method, __findAccountRecordsByAccountType(accountType)__ passes in a
 value of __enterprise__, and gets back a collection (Data Transfer Object) of Account Type
 Records.
 
+## How to install Core Force Instrumentation
+
+Create your Scratch Org (or Dev Sandbox)
+
+* Package Install - 
+
+```` 
+<Salesforce-My-Domain>/packaging/installPackage.apexp?p0=04t6g000008o0UtAAI 
+```` 
 ## How to install Samples
 
 Create your Scratch Org (or Dev Sandbox)
 
 * (Not Recommended) SFDX installed  - sfdx force:source:deploy ./src
-* Package Install - 
+* (Recommended) Package Install - 
 
 ```` 
 <Salesforce-My-Domain>/packaging/installPackage.apexp?p0=04t6g000008s8MmAAI 
@@ -267,14 +278,6 @@ be run thru VSCode or a DevConsole. You can find those examples, in ./src/srcipt
 
 __Note, you MUST INSTALL the Core Force Instrumentation Managed Package FIRST__
 
-## How to install Core Force Instrumentation
 
-Create your Scratch Org (or Dev Sandbox)
-
-* Package Install - 
-
-```` 
-<Salesforce-My-Domain>/packaging/installPackage.apexp?p0=04t6g000008o0UtAAI 
-```` 
 
 
