@@ -257,7 +257,7 @@ Records.
 
 Create your Scratch Org (or Dev Sandbox)
 
-* Package Install - 
+* Package Install - (Beta) ... means you cannot update ( just uninstall)
 
 ```` 
 <Salesforce-My-Domain>/packaging/installPackage.apexp?p0=04t6g000008o0UtAAI 
