@@ -80,7 +80,8 @@ for (Integer inx=0; inx < numOfResults; inx++ ) {
                     + '\nCommand(s) Result Type              :' + results[inx].typeOf()
                     );
 }
-
+// dump all the output once
+system.debug( string.join(outputData,'\n'));
 system.debug('[3]FINAL Duration: ' + m_watch.toString()  );
 
 ````
