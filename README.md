@@ -35,7 +35,14 @@ uninstall all the samples with a simple click!
 ## Samples
 
 ### Command
-The simplest thing to do is start with a sample command. This example is found in the source
+The simplest thing to do is start with a sample command. The Class Hierarchy is shown below.
+```mermaid
+classDiagram
+    ICommand <|-- BaseCommand
+    BaseCommand <|-- AuthenticationCommand
+```
+
+This example is found in the source
 tree (./scripts/apex/exampleCommand.apex). Please note this is a raw form and can be used
 in a service supporting specific functionality (i.e., Customer Management, Lead Management,
 etc.). Above, is a collection of commands, creates a Command Dispatcher, passes in the command
@@ -100,7 +107,13 @@ system.debug('[3]FINAL Duration: ' + m_watch.toString()  );
 ````
 ### Query
 
-Like the sample command there is a sample query. This example is found in the source tree
+Like the sample command there is a sample query. The Class Hierarchy is shown below.
+```mermaid
+classDiagram
+    IQuery <|-- BaseQuery
+    BaseQuery <|-- GetAccountByTypeQuery
+```
+This example is found in the source tree
 (./scripts/apex/exampleQuery.apex). Please note, this too is a raw form and can be used in a service
 supporting specific functionality (i.e., Customer Management, Lead Management, etc.)
 
@@ -202,7 +215,14 @@ appropriate handlers and executes. In addition, there is a conversion that is do
 The converter allows one to have different ViewModels.
 
 ### Service ( which wraps commands and queries)
-The Commands and Queries can be used to form a Service. The service could be Customer
+The Commands and Queries can be used to form a Service. The Service Class Hierarchy.
+```mermaid
+classDiagram
+    IService <|-- BaseQueryAndCommandContext
+    BaseQueryAndCommandContext <|-- BaseService
+    BaseService <|-- CustomerService
+```
+The service could be Customer
 Search, Customer Management, Order Management, etc. In this example, we create a
 Customer Service. The Customer Service just contains a query method; it could contain a sundry
 of services relevant to Customer Service.
@@ -274,7 +294,7 @@ Create your Scratch Org (or Dev Sandbox)
 * Package Install - (Beta) ... means you cannot update ( just uninstall)
 
 ```` 
-<Salesforce-My-Domain>/packaging/installPackage.apexp?p0=04t6g000008o0XYAAY 
+<Salesforce-My-Domain>/packaging/installPackage.apexp?p0=04t6g000008o0XiAAI 
 ```` 
 ## How to install Samples
 
