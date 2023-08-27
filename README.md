@@ -10,7 +10,20 @@ You can find documentation in ./docs directory. There will be a tutorial on setu
 
 Command-Query Responsibility Segregation, or CQRS, provides the ability to separate Queries from Commands responsibilities using SOLID Principles. Queries retrieve information from a sink (data store) for the user. While a Command performs a task, such as update a sink (data store). Commands mutate state, while a Query does not. Technically, a Command does not return a value; however, the example which follows will return status. Each provides a single responsibility (Single Responsibility principle in SOLID).
 
-Documentation can be found in the _docs_ directory [CQRS Design](https://github.com/1blusoftwave/forceInstrumentedSamples/tree/main/docs/CQRS-Design.pdf)
+# Documentation
+
+Documentation for CQRS can be found in the _docs_ directory [CQRS Design](https://github.com/1blusoftwave/forceInstrumentedSamples/tree/main/docs/CQRS-Design.pdf) And overview of BluSoftwave can be found [here](https://github.com/1blusoftwave/forceInstrumentedSamples/blob/main/docs/Blu%20softwave%20Overview.pdf). There are additional documentation located in the [docs](https://github.com/1blusoftwave/forceInstrumentedSamples/blob/main/docs/) directory.
+
+# Packages
+
+![Packages](https://github.com/1blusoftwave/forceInstrumentedSamples/blob/main/docs/img/BluPackages.png)
+
+_Force Instrumenter_ is built on three packages. Each package source is sub-divided to support various concerns (logging, configuration, common interfaces, repositories, etc.). The division in the packages source tree provides several advantages. Especially, when it comes to deployments and updates as this provides a focused aspect.
+
+The separation of concerns allows the ability to plug-n-play. Layers follow a strict-layered architecture with interfaces guarding the boundaries. This allows for implementation to vary while preserving the design contract. In addition, packaging allows targeting specific Salesforce Orgs.
+
+The three packages and one Samples package provides the current offering of Force Instrumenter. The Samples package is not a core component of _Force Instrumenter_.
+Additional documentation can be found here on the [package content](https://github.com/1blusoftwave/forceInstrumentedSamples/blob/main/docs/Package-Design.pdf).
 
 ## Caveat-Preemptor
 
